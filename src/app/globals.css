@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --background: #060807;
+  --foreground: #edf1ee;
+  --heading: #fcfdfd;
+  --muted: #98a1b2;
+  --card: rgba(13, 17, 20, 0.88);
+  --surface: rgba(255, 255, 255, 0.05);
+  --surface-elevated: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.16);
+  --border-soft: rgba(255, 255, 255, 0.11);
+  --accent: #43b892;
+  --accent-contrast: #e4fff5;
+  --accent-secondary: #d7c4a2;
+  --glow: rgba(67, 184, 146, 0.28);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-heading: var(--heading);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-contrast: var(--accent-contrast);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at 14% 8%, rgba(67, 184, 146, 0.1), transparent 34%),
+    radial-gradient(circle at 84% 20%, rgba(215, 196, 162, 0.08), transparent 42%),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  text-rendering: geometricPrecision;
+}
+
+.text-heading {
+  color: var(--heading);
+}
+
+.text-body {
+  color: var(--foreground);
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+.surface-card {
+  border: 1px solid var(--border-soft);
+  background: var(--surface);
+  backdrop-filter: blur(16px);
+}
+
+.surface-elevated {
+  border: 1px solid var(--border);
+  background: var(--surface-elevated);
+  backdrop-filter: blur(18px);
+}
+
+.glass-chip {
+  border: 1px solid var(--border-soft);
+  background: color-mix(in srgb, var(--surface-elevated) 78%, transparent);
+}
