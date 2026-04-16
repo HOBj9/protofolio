@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Alex Morgan | Full Stack Developer",
+  title: "hothaifa bjbj | Full Stack Developer",
   description: "Premium portfolio for a full stack developer.",
   icons: {
     icon: "/ho_bj_logo_refined.svg",

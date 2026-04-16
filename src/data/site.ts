@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "Alex Morgan",
+  name: "hothaifa bjbj",
   title: "Full Stack Developer",
   headline: "Building high-performance, clean modern web apps",
   summary:

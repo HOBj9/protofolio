@@ -147,16 +147,16 @@ export function ContactSection() {
                     target={platform.external ? "_blank" : undefined}
                     rel={platform.external ? "noreferrer noopener" : undefined}
                     aria-label={`Open ${platform.label}`}
-                    className="group flex items-center gap-3 rounded-xl border border-(--border-soft) bg-(--surface-elevated) px-3.5 py-3 transition duration-200 hover:border-green-300 hover:bg-green-50 dark:hover:border-emerald-300/40 dark:hover:bg-emerald-300/10"
+                    className="group flex min-w-0 items-center gap-3 rounded-xl border border-(--border-soft) bg-(--surface-elevated) px-3.5 py-3 transition duration-200 hover:border-green-300 hover:bg-green-50 dark:hover:border-emerald-300/40 dark:hover:bg-emerald-300/10"
                   >
-                    <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-green-200 bg-green-100 text-green-700 dark:border-emerald-200/30 dark:bg-emerald-300/10 dark:text-emerald-100">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-green-200 bg-green-100 text-green-700 dark:border-emerald-200/30 dark:bg-emerald-300/10 dark:text-emerald-100">
                       {platform.icon}
                     </span>
-                    <span className="min-w-0">
-                      <span className="block text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-zinc-400">
+                    <span className="min-w-0 flex-1 overflow-hidden">
+                      <span className="block text-sm font-semibold text-slate-800 dark:text-zinc-100">
                         {platform.label}
                       </span>
-                      <span className="block truncate text-sm text-slate-800 group-hover:text-green-700 dark:text-zinc-100 dark:group-hover:text-emerald-100">
+                      <span className="mt-0.5 hidden truncate text-sm text-slate-800 group-hover:text-green-700 dark:text-zinc-100 dark:group-hover:text-emerald-100 sm:block">
                         {platform.value}
                       </span>
                     </span>
